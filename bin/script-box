@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+SCRIPT_BOX_DIR="$HOME/dev/script-box"
+
+case "$1" in
+   excel-unprotect)
+        python3 "$SCRIPT_BOX_DIR/python/excel/unprotect_excel.py" "${@:2}"
+        ;;
+    *)
+    echo "Script Box"
+    echo ""
+    echo "Usage:"
+    echo "  script-box excel-unprotect <file.xlsx> [--mode workbook|sheets|both]"
+    echo ""
+    echo "Available commands:"
+    echo "  excel-unprotect    Remove workbook/sheet protection from authorized Excel files"
+    ;;
+
+esac
